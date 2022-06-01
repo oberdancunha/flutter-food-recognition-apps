@@ -88,6 +88,8 @@ flutter:
       fonts:
         - asset: assets/fonts/OpenSans/OpenSans-SemiBold.ttf
           weight: 600
+        - asset: assets/fonts/OpenSans/OpenSans-Bold.ttf
+          weight: 700
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
