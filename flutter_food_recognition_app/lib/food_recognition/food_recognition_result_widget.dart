@@ -43,7 +43,11 @@ class _FoodRecognitionResultWidgetState extends State<FoodRecognitionResultWidge
       case FoodRecognitionFailureState:
         return const SizedBox.shrink();
       default:
-        return const CircularProgressIndicator();
+        return const Expanded(
+          child: Center(
+            child: CircularProgressIndicator(),
+          ),
+        );
     }
   }
 }

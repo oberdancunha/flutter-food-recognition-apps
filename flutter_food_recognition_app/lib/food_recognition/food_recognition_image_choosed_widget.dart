@@ -36,12 +36,14 @@ class FoodRecognitionImageChoosedWidget extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              Row(
-                children: [
-                  FoodRecognitionImageWidget(imagePath: imagePath),
-                  const SizedBox(width: 20),
-                  FoodRecognitionResultWidget(imagePath: imagePath),
-                ],
+              Expanded(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    FoodRecognitionImageWidget(imagePath: imagePath),
+                    FoodRecognitionResultWidget(imagePath: imagePath),
+                  ],
+                ),
               ),
             ],
           ),
