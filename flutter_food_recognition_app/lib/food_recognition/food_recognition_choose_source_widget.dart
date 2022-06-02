@@ -50,14 +50,17 @@ class _FoodRecognitionChooseSourceWidgetState extends State<FoodRecognitionChoos
       );
 
   Future<void> _openImage(ImageSource imageSource) async {
-    final image = await _imagePicker.pickImage(source: imageSource);
-    showBottomSheet(
-      context: context,
-      backgroundColor: Colors.transparent,
-      builder: (_) => FractionallySizedBox(
-        heightFactor: 0.7,
-        child: FoodRecognitionImageChoosedWidget(imagePath: image!.path),
-      ),
+    final image = await _imagePicker.pickImage(
+      source: imageSource,
+      maxWidth: MediaQuery.of(context).size.width * 0.5,
+      maxHeight: MediaQuery.of(context).size.height * 0.5,
     );
+    if (image != null) {
+      showBottomSheet(
+        context: context,
+        backgroundColor: Colors.transparent,
+        builder: (_) => FoodRecognitionImageChoosedWidget(imagePath: image.path),
+      );
+    }
   }
 }

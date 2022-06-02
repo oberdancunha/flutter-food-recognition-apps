@@ -17,6 +17,9 @@ class FoodRecognitionImageWidget extends StatelessWidget {
           maxWidth: MediaQuery.of(context).size.width * 0.4,
           maxHeight: MediaQuery.of(context).size.height * 0.4,
         ),
-        child: Image.file(File(imagePath)),
+        child: Image.file(
+          File(imagePath),
+          fit: BoxFit.cover,
+        ),
       );
 }

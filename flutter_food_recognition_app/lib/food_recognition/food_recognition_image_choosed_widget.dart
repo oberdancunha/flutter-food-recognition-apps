@@ -14,6 +14,9 @@ class FoodRecognitionImageChoosedWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Container(
         width: MediaQuery.of(context).size.width,
+        constraints: BoxConstraints(
+          maxHeight: MediaQuery.of(context).size.height * 0.45,
+        ),
         decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.vertical(
