@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_food_recognition_core/application/food_recognition/food_recognition_state.dart';
+import 'package:flutter_food_recognition_core/application/food_recognition/food_recognition_store.dart';
+import 'package:flutter_food_recognition_dependency_module/flutter_food_recognition_dependency_module.dart';
 
-import 'food_recognition_image_widget.dart';
+import 'food_recognition_result_list_widget.dart';
 
-class FoodRecognitionResultWidget extends StatelessWidget {
+class FoodRecognitionResultWidget extends StatefulWidget {
   final String imagePath;
 
   const FoodRecognitionResultWidget({
@@ -11,34 +14,36 @@ class FoodRecognitionResultWidget extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) => Container(
-        width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.vertical(
-            top: Radius.circular(20),
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            children: [
-              const Text(
-                'Resultado do reconhecimento',
-                style: TextStyle(
-                  fontSize: 17,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.pink,
-                ),
-              ),
-              const SizedBox(height: 20),
-              Row(
-                children: [
-                  FoodRecognitionImageWidget(imagePath: imagePath),
-                ],
-              ),
-            ],
-          ),
-        ),
-      );
+  State<FoodRecognitionResultWidget> createState() => _FoodRecognitionResultWidgetState();
+}
+
+class _FoodRecognitionResultWidgetState extends State<FoodRecognitionResultWidget> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      context.read<FoodRecognitionStore>().fetchFoodRecognition(widget.imagePath);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final foodRecognitionStore = context.watch<FoodRecognitionStore>();
+    final foodRecognitionState = foodRecognitionStore.value;
+
+    return _selectWidgetByState(foodRecognitionState);
+  }
+
+  Widget _selectWidgetByState(FoodRecognitionState foodRecognitionState) {
+    switch (foodRecognitionState.runtimeType) {
+      case FoodRecognitionSuccessState:
+        return FoodRecognitionResultListWidget(
+          recognizedFoods: (foodRecognitionState as FoodRecognitionSuccessState).recognizedFoods,
+        );
+      case FoodRecognitionFailureState:
+        return const SizedBox.shrink();
+      default:
+        return const CircularProgressIndicator();
+    }
+  }
 }

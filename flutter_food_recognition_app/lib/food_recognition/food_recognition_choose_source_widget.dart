@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_recognition_dependency_module/flutter_food_recognition_dependency_module.dart';
 
-import 'food_recognition_result_widget.dart';
+import 'food_recognition_image_choosed_widget.dart';
 import 'food_recognition_source_button_widget.dart';
 
 class FoodRecognitionChooseSourceWidget extends StatefulWidget {
-  const FoodRecognitionChooseSourceWidget({Key? key}) : super(key: key);
+  const FoodRecognitionChooseSourceWidget({super.key});
 
   @override
   State<FoodRecognitionChooseSourceWidget> createState() =>
@@ -56,7 +56,7 @@ class _FoodRecognitionChooseSourceWidgetState extends State<FoodRecognitionChoos
       backgroundColor: Colors.transparent,
       builder: (_) => FractionallySizedBox(
         heightFactor: 0.7,
-        child: FoodRecognitionResultWidget(imagePath: image!.path),
+        child: FoodRecognitionImageChoosedWidget(imagePath: image!.path),
       ),
     );
   }
