@@ -916,7 +916,7 @@ final translateToPt = {
   "hochzeitssuppe": "hochzeitssuppe",
   "hoe": "hoe",
   "hokkien_fried_rice": "arroz frito hokkien",
-  "home_fries": "batata frita caseira",
+  "home_fries": "batatas fritas caseira",
   "honey_cake": "bolo de mel",
   "hong_dou_tang": "hong dou tang",
   "hoppang": "hoppang",
