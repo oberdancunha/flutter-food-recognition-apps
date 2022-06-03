@@ -70,6 +70,7 @@ flutter:
     - assets/images/sources/camera.png
     - assets/images/sources/gallery.png
     - assets/images/food_icon.png
+    - assets/images/no_food_recognized.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
