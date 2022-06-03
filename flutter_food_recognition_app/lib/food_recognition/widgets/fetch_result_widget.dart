@@ -3,21 +3,21 @@ import 'package:flutter_food_recognition_core/application/food_recognition/food_
 import 'package:flutter_food_recognition_core/application/food_recognition/food_recognition_store.dart';
 import 'package:flutter_food_recognition_dependency_module/flutter_food_recognition_dependency_module.dart';
 
-import 'food_recognition_result_list_widget.dart';
+import 'recognized_food_list_widget.dart';
 
-class FoodRecognitionResultWidget extends StatefulWidget {
+class FetchResultWidget extends StatefulWidget {
   final String imagePath;
 
-  const FoodRecognitionResultWidget({
+  const FetchResultWidget({
     required this.imagePath,
     super.key,
   });
 
   @override
-  State<FoodRecognitionResultWidget> createState() => _FoodRecognitionResultWidgetState();
+  State<FetchResultWidget> createState() => _FetchResultWidgetState();
 }
 
-class _FoodRecognitionResultWidgetState extends State<FoodRecognitionResultWidget> {
+class _FetchResultWidgetState extends State<FetchResultWidget> {
   @override
   void initState() {
     super.initState();
@@ -37,7 +37,7 @@ class _FoodRecognitionResultWidgetState extends State<FoodRecognitionResultWidge
   Widget _selectWidgetByState(FoodRecognitionState foodRecognitionState) {
     switch (foodRecognitionState.runtimeType) {
       case FoodRecognitionSuccessState:
-        return FoodRecognitionResultListWidget(
+        return RecognizedFoodListWidget(
           recognizedFoods: (foodRecognitionState as FoodRecognitionSuccessState).recognizedFoods,
         );
       case FoodRecognitionFailureState:

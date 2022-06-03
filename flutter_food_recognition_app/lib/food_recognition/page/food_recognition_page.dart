@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'food_recognition_choose_source_widget.dart';
+import '../widgets/food_recognition_body_widget.dart';
 
-class FoodRecognitionBodyWidget extends StatelessWidget {
-  const FoodRecognitionBodyWidget({super.key});
+class FoodRecognitionPage extends StatelessWidget {
+  const FoodRecognitionPage({super.key});
 
   @override
   Widget build(BuildContext context) => Container(
@@ -23,6 +23,6 @@ class FoodRecognitionBodyWidget extends StatelessWidget {
             ],
           ),
         ),
-        child: const FoodRecognitionChooseSourceWidget(),
+        child: const FoodRecognitionBodyWidget(),
       );
 }

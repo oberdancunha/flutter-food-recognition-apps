@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-class FoodRecognitionImageWidget extends StatelessWidget {
+class ShowImageWidget extends StatelessWidget {
   final String imagePath;
 
-  const FoodRecognitionImageWidget({
+  const ShowImageWidget({
     required this.imagePath,
     super.key,
   });

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'food_recognition_image_widget.dart';
-import 'food_recognition_result_widget.dart';
+import 'fetch_result_widget.dart';
+import 'show_image_choosed_widget.dart';
 
-class FoodRecognitionImageChoosedWidget extends StatelessWidget {
+class ImageChoosedWidget extends StatelessWidget {
   final String imagePath;
 
-  const FoodRecognitionImageChoosedWidget({
+  const ImageChoosedWidget({
     required this.imagePath,
     super.key,
   });
@@ -40,8 +40,8 @@ class FoodRecognitionImageChoosedWidget extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    FoodRecognitionImageWidget(imagePath: imagePath),
-                    FoodRecognitionResultWidget(imagePath: imagePath),
+                    ShowImageWidget(imagePath: imagePath),
+                    FetchResultWidget(imagePath: imagePath),
                   ],
                 ),
               ),

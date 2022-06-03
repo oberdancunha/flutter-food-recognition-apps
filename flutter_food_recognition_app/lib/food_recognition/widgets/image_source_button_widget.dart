@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class FoodRecognitionSourceButtonWidget extends StatelessWidget {
+class ImageSourceButtonWidget extends StatelessWidget {
   final Color backgroundColor;
   final String image;
   final String label;
   final VoidCallback onTap;
 
-  const FoodRecognitionSourceButtonWidget({
+  const ImageSourceButtonWidget({
     required this.backgroundColor,
     required this.image,
     required this.label,

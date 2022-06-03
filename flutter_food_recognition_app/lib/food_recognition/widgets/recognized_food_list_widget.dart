@@ -3,19 +3,19 @@ import 'package:flutter_food_recognition_core/domain/food_recognition.dart';
 import 'package:flutter_food_recognition_core/translate/translate_food_name_pt.dart';
 import 'package:flutter_food_recognition_dependency_module/flutter_food_recognition_dependency_module.dart';
 
-class FoodRecognitionResultListWidget extends StatefulWidget {
+class RecognizedFoodListWidget extends StatefulWidget {
   final KtList<FoodRecognition> recognizedFoods;
 
-  const FoodRecognitionResultListWidget({
+  const RecognizedFoodListWidget({
     required this.recognizedFoods,
     super.key,
   });
 
   @override
-  State<FoodRecognitionResultListWidget> createState() => _FoodRecognitionResultListWidgetState();
+  State<RecognizedFoodListWidget> createState() => _RecognizedFoodListWidgetState();
 }
 
-class _FoodRecognitionResultListWidgetState extends State<FoodRecognitionResultListWidget> {
+class _RecognizedFoodListWidgetState extends State<RecognizedFoodListWidget> {
   late ScrollController _scrollController;
 
   @override
