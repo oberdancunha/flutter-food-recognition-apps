@@ -708,7 +708,7 @@ final translateToPt = {
   "finikia": "finikia",
   "finnan_haddie": "finnan haddie",
   "fios_de_ovos": "fios de ovos",
-  "fish_and_chips": "peixe e batata frita",
+  "fish_and_chips": "peixe e batatas fritas",
   "fish_ball": "fish ball",
   "fish_head_curry": "curry de cabeça de peixe",
   "fish_slice": "fatia de peixe",
