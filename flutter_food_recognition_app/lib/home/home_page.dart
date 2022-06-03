@@ -12,6 +12,8 @@ class HomePage extends StatelessWidget {
         providers: providers,
         child: Scaffold(
           appBar: AppBar(
+            leading: Image.asset('assets/images/main_icon.png'),
+            titleSpacing: 0,
             title: const Text('Reconhecimento de alimento'),
             automaticallyImplyLeading: false,
           ),
