@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NoFoodRecognizedWidget extends StatelessWidget {
-  const NoFoodRecognizedWidget({Key? key}) : super(key: key);
+  const NoFoodRecognizedWidget({super.key});
 
   @override
   Widget build(BuildContext context) => Column(

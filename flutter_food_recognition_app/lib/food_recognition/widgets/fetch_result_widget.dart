@@ -3,7 +3,7 @@ import 'package:flutter_food_recognition_core/application/food_recognition/food_
 import 'package:flutter_food_recognition_core/application/food_recognition/food_recognition_store.dart';
 import 'package:flutter_food_recognition_dependency_module/flutter_food_recognition_dependency_module.dart';
 
-import 'no_food_recognized_widget.dart';
+import 'failure/food_recognition_failure_widget.dart';
 import 'recognized_food_list_widget.dart';
 
 class FetchResultWidget extends StatefulWidget {
@@ -42,9 +42,11 @@ class _FetchResultWidgetState extends State<FetchResultWidget> {
           recognizedFoods: (foodRecognitionState as FoodRecognitionSuccessState).recognizedFoods,
         );
       case FoodRecognitionFailureState:
-        return const Expanded(
+        return Expanded(
           child: Center(
-            child: NoFoodRecognizedWidget(),
+            child: FoodRecognitionFailureWidget(
+              failure: (foodRecognitionState as FoodRecognitionFailureState).failure,
+            ),
           ),
         );
       default:
