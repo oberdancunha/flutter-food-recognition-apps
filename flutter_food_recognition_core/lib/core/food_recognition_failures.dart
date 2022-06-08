@@ -1,3 +1,3 @@
 enum FoodRecognitionFailure {
-  noRecognizedFoods,
+  noRecognizedFood,
 }

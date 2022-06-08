@@ -40,10 +40,10 @@ void main() {
   );
 
   valueListenableTest<FoodRecognitionStore>(
-    'Should change the state from initial to loading first and then to noRecognizedFoods failure',
+    'Should change the state from initial to loading first and then to noRecognizedFood failure',
     build: () {
       when(() => mockFoodRecognitionUseCase(any())).thenAnswer(
-        (_) async => left(FoodRecognitionFailure.noRecognizedFoods),
+        (_) async => left(FoodRecognitionFailure.noRecognizedFood),
       );
 
       return foodRecognitionStore;
