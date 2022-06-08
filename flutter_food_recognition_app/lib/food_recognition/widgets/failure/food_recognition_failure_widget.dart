@@ -14,7 +14,7 @@ class FoodRecognitionFailureWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (failure) {
-      case FoodRecognitionFailure.noFoodDetected:
+      case FoodRecognitionFailure.noRecognizedFoods:
         return const NoFoodRecognizedWidget();
     }
   }

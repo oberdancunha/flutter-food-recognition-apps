@@ -38,7 +38,7 @@ class FoodRecognitionUseCase implements UseCase<UseCaseType, String> {
     });
 
     if (recognizedFoodsFinal.isEmpty) {
-      return left(FoodRecognitionFailure.noFoodDetected);
+      return left(FoodRecognitionFailure.noRecognizedFoods);
     }
 
     return right(recognizedFoodsFinal.toImmutableList());

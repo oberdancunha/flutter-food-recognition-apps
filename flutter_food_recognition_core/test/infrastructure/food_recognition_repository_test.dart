@@ -60,7 +60,7 @@ void main() {
     'Foods recognized failure |',
     () {
       test(
-        'Should return a FoodRecognitionFailure.noFoodDetected() when there is a NoFoodDetectedException',
+        'Should return a FoodRecognitionFailure.noRecognizedFoods() when there is a NoFoodDetectedException',
         () async {
           when(() => mockFoodRecognitionDataSource.recognize(any()))
               .thenThrow(NoFoodDetectedException());
@@ -70,7 +70,7 @@ void main() {
             recognizedFoods,
             equals(
               left<FoodRecognitionFailure, List<FoodRecognition>>(
-                FoodRecognitionFailure.noFoodDetected,
+                FoodRecognitionFailure.noRecognizedFoods,
               ),
             ),
           );

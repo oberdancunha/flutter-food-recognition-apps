@@ -83,14 +83,14 @@ void main() {
 
       group('Foods recognized failure |', () {
         test(
-          'Should return a failure when no food is detected',
+          'Should return a failure when no food is recognized',
           () async {
             when(() => mockFoodRecognitionRepository.recognize(any())).thenAnswer(
-              (_) async => left(FoodRecognitionFailure.noFoodDetected),
+              (_) async => left(FoodRecognitionFailure.noRecognizedFoods),
             );
             final recognizedFoods = await callUseCaseAndVerifyRepositoryCall();
             expect(recognizedFoods, isA<Left>());
-            expect(recognizedFoods, equals(left(FoodRecognitionFailure.noFoodDetected)));
+            expect(recognizedFoods, equals(left(FoodRecognitionFailure.noRecognizedFoods)));
           },
         );
       });
@@ -162,17 +162,17 @@ void main() {
       );
 
       test(
-        'Should return a failure when no food is detected in any repository',
+        'Should return a failure when no food is recognized in any repository',
         () async {
           when(() => mockFoodRecognitionRepository.recognize(any())).thenAnswer(
-            (_) async => left(FoodRecognitionFailure.noFoodDetected),
+            (_) async => left(FoodRecognitionFailure.noRecognizedFoods),
           );
           when(() => mockFoodRecognitionRepositorySecondModel.recognize(any())).thenAnswer(
-            (_) async => left(FoodRecognitionFailure.noFoodDetected),
+            (_) async => left(FoodRecognitionFailure.noRecognizedFoods),
           );
           final recognizedFoods = await callUseCaseAndVerifyRepositoriesCall();
           expect(recognizedFoods, isA<Left>());
-          expect(recognizedFoods, equals(left(FoodRecognitionFailure.noFoodDetected)));
+          expect(recognizedFoods, equals(left(FoodRecognitionFailure.noRecognizedFoods)));
         },
       );
     },
