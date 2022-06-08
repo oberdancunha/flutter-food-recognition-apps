@@ -18,7 +18,7 @@ class FoodRecognitionTfliteDataSource implements FoodRecognitionDataSource {
       asynch: false,
     );
     if (recognizedFoods!.isEmpty) {
-      throw NoFoodDetectedException();
+      throw NoRecognizedFoodException();
     }
 
     return recognizedFoods

@@ -1,1 +1,1 @@
-class NoFoodDetectedException implements Exception {}
+class NoRecognizedFoodException implements Exception {}

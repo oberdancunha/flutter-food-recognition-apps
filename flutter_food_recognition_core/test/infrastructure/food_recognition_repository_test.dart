@@ -60,10 +60,10 @@ void main() {
     'Foods recognized failure |',
     () {
       test(
-        'Should return a FoodRecognitionFailure.noRecognizedFood() when there is a NoFoodDetectedException',
+        'Should return a FoodRecognitionFailure.noRecognizedFood() when there is a NoRecognizedFoodException',
         () async {
           when(() => mockFoodRecognitionDataSource.recognize(any()))
-              .thenThrow(NoFoodDetectedException());
+              .thenThrow(NoRecognizedFoodException());
           final recognizedFoods = await callRepositoryAndVerifyDataSourceCall();
           expect(recognizedFoods, isA<Left>());
           expect(

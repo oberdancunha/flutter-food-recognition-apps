@@ -30,7 +30,7 @@ void main() {
   }
 
   testWidgets(
-    'Should return a list of foods detected successfully',
+    'Should return a list of foods recognized successfully',
     (tester) async {
       setUpMockCallTflite(tester, data: mockDataRecognizedFoodsTflite);
       final recognizedFoods = await foodRecognitionTfliteDatasource.recognize("");
@@ -39,13 +39,13 @@ void main() {
   );
 
   testWidgets(
-    'Should return a NoFoodDetectedException when none food is detected',
+    'Should return a NoRecognizedFoodException when none food is recognized',
     (tester) async {
       setUpMockCallTflite(tester, data: []);
       final callRecognizedFoods = foodRecognitionTfliteDatasource.recognize;
       expect(
         () async => callRecognizedFoods(""),
-        throwsA(const TypeMatcher<NoFoodDetectedException>()),
+        throwsA(const TypeMatcher<NoRecognizedFoodException>()),
       );
     },
   );

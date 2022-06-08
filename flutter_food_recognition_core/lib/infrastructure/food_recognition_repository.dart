@@ -24,7 +24,7 @@ class FoodRecognitionRepository implements IFoodRecognitionRepository {
             )
             .toList(),
       );
-    } on NoFoodDetectedException {
+    } on NoRecognizedFoodException {
       return left(FoodRecognitionFailure.noRecognizedFood);
     }
   }
