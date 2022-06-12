@@ -17,15 +17,20 @@ class ImageSourceButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Column(
         children: [
-          SizedBox(
-            child: Column(),
-          ),
-          GestureDetector(
-            onTap: onTap,
-            child: CircleAvatar(
-              backgroundColor: backgroundColor,
-              radius: MediaQuery.of(context).size.width * 0.15,
-              child: Image.asset('assets/images/sources/$image'),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                highlightColor: backgroundColor.withOpacity(0.3),
+                splashColor: backgroundColor.withOpacity(0.5),
+                onTap: onTap,
+                child: CircleAvatar(
+                  backgroundColor: backgroundColor,
+                  radius: MediaQuery.of(context).size.width * 0.15,
+                  child: Image.asset('assets/images/sources/$image'),
+                ),
+              ),
             ),
           ),
           const SizedBox(height: 10),
