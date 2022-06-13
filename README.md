@@ -29,19 +29,19 @@ Além dessas, há também outras bibliotecas. O pubspec.yaml possui a lista comp
 
 No momento em que esse projeto foi escrito, a biblioteca tflite apresenta inicialmente dois erros. Para corrigi-los, é necessário seguir os seguintes passos:
 
- 1. <strong>Could not build the precompiled application for the device. Lexical or Preprocessor Issue (Xcode): 'vector' file not found</strong>
-  1.1. Abra o <strong>Xcode</strong>
-  1.2. Selecione <strong>Runner</strong>
-  1.3. Selecione <strong>Build Settings</strong>
-  1.4. Selecione <strong>All</strong>
-  1.5. Procure <strong>Apple Clang - Language</strong>
-  1.6 Em <strong>Compile Sources As</strong>, escolha <em> Objective-C++ </em>
+1. <strong>Could not build the precompiled application for the device. Lexical or Preprocessor Issue (Xcode): 'vector' file not found</strong>
+- Abra o <strong>Xcode</strong>
+- Selecione <strong>Runner</strong>
+- Selecione <strong>Build Settings</strong>
+- Selecione <strong>All</strong>
+- Procure <strong>Apple Clang - Language</strong>
+- Em <strong>Compile Sources As</strong>, escolha <em> Objective-C++ </em>
 
 2. <strong>TFLite Error: "metal_delegate.h" File Not Found</strong>
- 2.1. Vá para o diretório <strong>ios</strong> localizado no respectivo projeto
- 2.2. Abra o arquivo <strong>Podfile.lock</strong>
- 2.3. Substitua a linha <strong>- TensorFlowLiteC (2.7.0):</strong> por <strong>- TensorFlowLiteC (2.2.0):</strong>
- 2.4. Ainda no diretório <strong>ios</strong>, execute o comando <em> pod install </em>
+- Vá para o diretório <strong>ios</strong> localizado no respectivo projeto
+- Abra o arquivo <strong>Podfile.lock</strong>
+- Substitua a linha <strong>- TensorFlowLiteC (2.7.0):</strong> por <strong>- TensorFlowLiteC (2.2.0):</strong>
+- Ainda no diretório <strong>ios</strong>, execute o comando <em> pod install </em>
 
  Além desses erros, a documentação do tflite possui algumas outras recomendações de configuração. Para mais detalhes, consulte https://pub.dev/packages/tflite.
 
@@ -159,6 +159,8 @@ A usabilidade é bem simples. Basta escolher uma imagem de comida, através de u
       <p align="center">
         <img
           src="images/FFR_iPhone_8.gif"
+          width="300px"
+          height="533px"
           border="1px solid black"
         />
       </p>
@@ -170,6 +172,8 @@ A usabilidade é bem simples. Basta escolher uma imagem de comida, através de u
       <p align="center">
         <img
           src="images/FFR_iPhone_5.gif"
+          width="300px"
+          height="533px"
           border="1px solid black"
         />
       </p>
@@ -181,6 +185,8 @@ A usabilidade é bem simples. Basta escolher uma imagem de comida, através de u
       <p align="center">
         <img
           src="images/FFR_Samsung_J5.gif"
+          width="300px"
+          height="533px"
           border="1px solid black"
         />
       </p>
@@ -194,9 +200,9 @@ A usabilidade é bem simples. Basta escolher uma imagem de comida, através de u
       <p align="center">
         <img
           src="images/no_food_recognized.png"
+          width="300px"
+          height="533px"
           border="1px solid black"
-          width="300"
-          height="533"
         />
       </p>
       <p align="center">
