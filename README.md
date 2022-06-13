@@ -160,7 +160,7 @@ A usabilidade é bem simples. Basta escolher uma imagem de comida, através de u
         <img
           src="images/FFR_iPhone_8.gif"
           width="300px"
-          height="533px"
+          height="450px"
           border="1px solid black"
         />
       </p>
@@ -173,7 +173,7 @@ A usabilidade é bem simples. Basta escolher uma imagem de comida, através de u
         <img
           src="images/FFR_iPhone_5.gif"
           width="300px"
-          height="533px"
+          height="450px"
           border="1px solid black"
         />
       </p>
@@ -186,7 +186,7 @@ A usabilidade é bem simples. Basta escolher uma imagem de comida, através de u
         <img
           src="images/FFR_Samsung_J5.gif"
           width="300px"
-          height="533px"
+          height="450px"
           border="1px solid black"
         />
       </p>
@@ -201,7 +201,7 @@ A usabilidade é bem simples. Basta escolher uma imagem de comida, através de u
         <img
           src="images/no_food_recognized.png"
           width="300px"
-          height="533px"
+          height="450px"
           border="1px solid black"
         />
       </p>
