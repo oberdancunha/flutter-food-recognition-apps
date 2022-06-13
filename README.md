@@ -172,7 +172,7 @@ A usabilidade é bem simples. Basta escolher uma imagem de comida, através de u
       <p align="center">
         <img
           src="images/FFR_iPhone_5.gif"
-          width="250px"
+          width="300px"
           height="450px"
           border="1px solid black"
         />
@@ -200,7 +200,7 @@ A usabilidade é bem simples. Basta escolher uma imagem de comida, através de u
       <p align="center">
         <img
           src="images/no_food_recognized.png"
-          width="300px"
+          width="250px"
           height="450px"
           border="1px solid black"
         />
